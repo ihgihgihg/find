@@ -1,0 +1,61 @@
+ll: 1.282          #小车轴距  #红1：1.19 红2：1.225 黄：1.63 new_panda: 1.282
+dt: 0.5
+delay: 0 #0.1482
+N: 10
+u_N: 0
+weights_x : [50,20,100,10]
+weights_u : [0.1,0.1]
+weights_xn : [500,200,1000,100]
+v_b: 0.3       #技术要求速度极限3.0m/s
+v_backword_b: -0.3       #技术要求速度极限3.0m/s
+v_turn_b: 0.3
+straight_b: 10
+a_b: 0.3        #加速度极限0.8m/s2 
+a_backward_b: -0.3 #减速度极限-2.5m/s2
+delta_b: 75      #转角极限90°
+ddelta_b: 45     #响应速度极限100°/s
+sdelta_b: 5      #转角极限90°
+sddelta_b: 5     #响应速度极限100°/s
+s_dphi_b: 1
+vs_b: 0.3
+kf_flag: 0
+steering_direction: 1
+fork_target_height: 0.5
+v_fork_percent_b: 100
+fork_fix_distance: 0.0105
+#优化选项
+first_order_filtering_alpha: 1
+#条件停车
+vs_min: 0.05
+stop_threshold: 0.1
+#原地转弯
+tip: 0         #转弯角度 值不等于0时自动生成转弯路径
+#自定义路径
+# track_s   : [1,2,3,4,5,6,7,8,9,10]                     #直线s>=0
+# track_r   : [1,2,3,4,5,6,7,8,9,0]                      #转弯半径r>=0
+# track_ddeg: [-90,90,-90,90,-90,90,-90,90,-90,0]        #转弯弧度ddeg>=0
+
+# track_s   : [2,2]                     #直线s>=0
+# track_r   : [2,0]                      #转弯半径r>0
+# track_ddeg: [-90,0]        #转弯弧度ddeg>0
+
+# track_s   : [2,0,0,2]                     #直线s>=0
+# track_r   : [2,4,2,0]                      #转弯半径r>0
+# track_ddeg: [90,-180,90,0]                   #转弯弧度ddeg>0
+
+# track_s   : [2,2]
+# track_r   : [5,0]
+# track_ddeg: [90,0]
+
+track_s   : [1]
+track_r   : [0]
+track_ddeg: [0]
+
+# track_s   : [3,3,-3,-3]
+# track_r   : [0.5,0,-0.5,0]
+# track_ddeg: [90,0,-90,0]
+
+# track_s   : [2,2]
+# track_r   : [0.5,0]
+# track_ddeg: [90,0]
+
