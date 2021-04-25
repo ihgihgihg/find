@@ -11,7 +11,7 @@ using namespace std;
 
 int main() {
   //  已知参数【直线距离，旋转角度，旋转半径】顺时针为旋转角度为负
-  double x0 = 0, y0 = 0, radd = 0, xz = 0, yz = 0;
+  double x0 = 0, y0 = 0, radd = 0;
   // double s = 2, rad = 90, r = 2;
   double mes[10][100];
   double s_sum;
@@ -91,7 +91,7 @@ int main() {
   //给点部分：
   int n = 0; //确定直线段
   double b_x0, e_x0, b_y0, e_y0, d_x0, d_y0, r_x0, r_y0;
-  double s0 = 2 + 3.14 + 2 + 2 + 1;
+  double s0 = 100;
   double d_rad, d_radd;
   for (int i = 0; i < m; i++) {
     n = i;
@@ -99,8 +99,14 @@ int main() {
       // std::cout << n << std::endl;
       break;
     }
+    if (s0 > mes[4][m - 1]) {
+      s0 = mes[4][m - 1];
+    }
   }
-  // std::cout << n << std::endl;
+  /*   if (n < m) {
+      s0 = mes[4][m - 1];
+    } */
+  // std::cout << mes << std::endl;
   //直线段
   if (mes[3][n] == 0) {
     b_x0 = mes[1][n - 1];
@@ -112,7 +118,7 @@ int main() {
     // std::cout << b_x0 << "      " << b_y0 << std::endl;
     // std::cout << e_x0 << "      " << e_y0 << std::endl;
     std::cout << d_x0 << "      " << d_y0 << std::endl;
-    std::cout << mes[7][n] << "      " << mes[6][n - 1] << std::endl; // phi和r
+    std::cout << mes[7][n] << "      " << mes[6][n] << std::endl; // phi和r
   }
   //圆弧段
   if (mes[3][n] == 1) {
@@ -122,7 +128,6 @@ int main() {
     e_y0 = mes[2][n];
     r_x0 = mes[8][n];
     r_y0 = mes[9][n];
-    //这里用向量
     d_rad =
         mes[5][n] * (s0 - mes[4][n - 1]) / (abs(mes[6][n]) * abs(mes[5][n]));
     double xbr = b_x0 - r_x0, ybr = b_y0 - r_y0;
@@ -138,8 +143,4 @@ int main() {
     std::cout << d_radd << "      " << mes[6][n] << std::endl; // phi和r
   }
   return 0;
-}
-void FindS();
-void FindS() {
-  std::cout << "Hello from the displayMessage function.\n" << std::endl;
 }
