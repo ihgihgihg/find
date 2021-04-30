@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/Gun.h
+string
+-
+
+../include/Soldier.h
+Gun.h
+../include/Gun.h
+string
+-
+
+/home/wjy/workplace/learning_shoot/main.cpp
+Gun.h
+/home/wjy/workplace/learning_shoot/Gun.h
+Soldier.h
+/home/wjy/workplace/learning_shoot/Soldier.h
+
+/home/wjy/workplace/learning_shoot/src/Gun.cpp
+Gun.h
+/home/wjy/workplace/learning_shoot/src/Gun.h
+iostream
+/home/wjy/workplace/learning_shoot/src/iostream
+
+/home/wjy/workplace/learning_shoot/src/Solider.cpp
+Soldier.h
+/home/wjy/workplace/learning_shoot/src/Soldier.h
+

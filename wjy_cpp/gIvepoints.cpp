@@ -2,28 +2,26 @@
 //#include "solution.h"
 //#include "yaml.h"
 /* #include <Eigen/Core>
-#include "Givepoints.h"
+
 #include <Eigen/Sparse> */
 #include <iostream>
 #include <math.h>
 //#include <stdio.h>
 // using namespace std;
 #define pi 3.1415926535
+#include "Givepoints.h"
 
-double s_[] = {2, 2, -2, -2, 2, 2, -2, -2};
-double r_[] = {2, 0, -2, 0, 2, 0, -2, 0};
-double rad_[] = {90, 0, 90, 0, -90, 0, -90, 0};
-double x_begin = 0, y_begin = 0, radd_begin = 0;
-
-double Givepoints() {}
-int main() {
+double GivePoints::Points(double s0) {
   //  已知参数【直线距离，旋转角度，旋转半径】顺时针为旋转角度为负
+  double s_[] = {2, 2, -2, -2, 2, 2, -2, -2};
+  double r_[] = {2, 0, -2, 0, 2, 0, -2, 0};
+  double rad_[] = {90, 0, 90, 0, -90, 0, -90, 0};
+  double x_begin = 0, y_begin = 0, radd_begin = 0;
   double x0 = x_begin, y0 = y_begin, radd = radd_begin;
   // double s = 2, rad = 90, r = 2;
   double mes[10][100];
   double s_sum;
   int m = 1;
-
   double s, rad, r, d_s;
   int d = sizeof(s_) / sizeof(s_[0]);
   for (size_t i = 0; i < d; i++) {
@@ -96,7 +94,7 @@ int main() {
   //给点部分：
   int n = 0; //确定直线段
   double b_x0, e_x0, b_y0, e_y0, d_x0, d_y0, r_x0, r_y0;
-  double s0 = 100;
+  // double s0 = 100;
   double d_rad, d_radd;
   for (int i = 0; i < m; i++) {
     n = i;
@@ -149,3 +147,11 @@ int main() {
   }
   return 0;
 }
+/* int main() {
+  double s_[] = {2, 2, -2, -2, 2, 2, -2, -2};
+  double r_[] = {2, 0, -2, 0, 2, 0, -2, 0};
+  double rad_[] = {90, 0, 90, 0, -90, 0, -90, 0};
+  double x_begin = 0, y_begin = 0, radd_begin = 0;
+  Givepoints(2);
+  return 0;
+} */

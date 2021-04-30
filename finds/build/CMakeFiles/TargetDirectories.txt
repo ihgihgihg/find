@@ -1,0 +1,3 @@
+/home/wjy/workplace/finds/build/CMakeFiles/rebuild_cache.dir
+/home/wjy/workplace/finds/build/CMakeFiles/main.dir
+/home/wjy/workplace/finds/build/CMakeFiles/edit_cache.dir

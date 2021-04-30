@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/Givepoints.h
+vector
+-
+
+/home/wjy/workplace/finds/main.cpp
+Givepoints.h
+/home/wjy/workplace/finds/Givepoints.h
+iostream
+-
+
+/home/wjy/workplace/finds/src/gIvepoints.cpp
+Eigen/Sparse
+-
+iostream
+-
+math.h
+-
+Givepoints.h
+/home/wjy/workplace/finds/src/Givepoints.h
+

@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/holleword_cmake.dir/holleworld.cpp.o  -o holleword_cmake 

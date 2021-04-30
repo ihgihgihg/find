@@ -1,0 +1,3 @@
+/home/wjy/workplace/holleworld/build/CMakeFiles/rebuild_cache.dir
+/home/wjy/workplace/holleworld/build/CMakeFiles/holleword_cmake.dir
+/home/wjy/workplace/holleworld/build/CMakeFiles/edit_cache.dir
